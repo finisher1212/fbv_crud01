@@ -1,0 +1,25 @@
+{% extends 'firstapp/prod.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    <title>AddProduct</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<h1><center>Add Laptop to the List</center></h1>
+<div class="container" >
+
+        <form method="post" style="width: 85%" class="jumbotron">
+        {% csrf_token %}
+        {{form|crispy}}
+<!--        {{form.as_p}}-->
+        <input type="submit" value="Add Product" class="btn btn-warning" >
+        </form>
+</div>
+
+{% endblock %}
