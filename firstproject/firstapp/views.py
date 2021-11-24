@@ -42,6 +42,7 @@ def updateprodview(request, oid):
 
 def deleteprodview(request, i):
     obj = Laptop.objects.get(id = i)
+    print(obj)
     obj.delete()
     return redirect('allprods')
 
